@@ -117,7 +117,9 @@ correlated.
 There are several event (e.g. `carrot`) which we need to find the
 correlations with `squirrel` event. Then we can find out which event
 is most correlated with the `squirrel` event and then let Scott know
-what to do or not do.
+what to do or not do. 
+
+Implement the following functions in the provided `correlation.py` file.
 
 
 1. Write a function called `load_journal` which will load the journal
