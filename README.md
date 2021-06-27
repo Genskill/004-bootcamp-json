@@ -18,7 +18,11 @@ which has multiple entries like this one for each day of the month for
       ],
       "squirrel": false
     }
-    
+
+This indicates that, for this day, Scott ate carrots, he exercised,
+and it was the weekend. He did not turn into a squirrel on that
+day. There will be similar entries for each of the 92 days.
+
 This file was then submitted to the doctor who analysed it to find out
 which event is most correlated (positively or negatively) with the
 transformation into the squirrel.
@@ -98,13 +102,40 @@ Calculating the correlation like so
 This means that there's a slight negative correlation. If `X` is
 True there's a slight chance that `Y` is False. If `X` were a social
 event like "festival coming up", and `Y` were an event like "supply of
-clothes" reducing, then you can make a reasonable assumption that if
+clothes reducing", then you can make a reasonable assumption that if
 the festival is coming up, there's a slight chance of supply of
 clothes reducing. This doesn't suggest that `X` causes `Y`
 (correlation is not causation). It only suggests that they're
 correlated. 
 
 
-    
+# Exercises
+
+There are several event (e.g. `carrot`) which we need to find the
+correlations with `squirrel` event. Then we can find out which event
+is most correlated with the `squirrel` event and then let Scott know
+what to do or not do.
 
 
+1. Write a function called `load_journal` which will load the journal
+   file using the `json` module and returns the parsed data. It will
+   take the name of the file to parse as input and return a list of
+   dictionaries (which is what the actual journal file contains).
+
+1. Write a function called `compute_phi` which will take 2 inputs, the
+   output of the `load_journal` function mentioned above and an event
+   (e.g. `"carrot"`). It should return the correlation of the
+   `"carrot"` event and the `squirrel` event.
+   
+1. Write a function called `compute_correlations` which will take the
+   filename of the journal (`journal.json`) as input. It will first
+   call `load_journal` to load the file. Then it will go through the
+   contents of the file and call `compute_phi` for each event and
+   finally return a dictionary whose keys are the various events in
+   the journal and the values will be the correlations of the event
+   and `squirrel`. 
+
+1. Write a function called `diagnose` which will take the
+   `journal.json` and use `compute_correlations` and return the event
+   that's most highly (positively or negatively) correlated with the
+   `squirrel` event. 
