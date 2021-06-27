@@ -145,6 +145,9 @@ Implement the following functions in the provided `correlation.py` file.
    return the event that's most highly positively and most highly
    negatively correlated with the `squirrel` event.
 
+*Do not modify any files except `correlation.py`*. If you do, your
+grading will fail.
+
 # Diagnosis
 
 What would you recommend to Scott to prevent transforming into a squirrel?
