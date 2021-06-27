@@ -1,5 +1,8 @@
 # Introduction
 
+(This is a translation of a problem found here
+http://eloquentjavascript.net/04_data.html into Python)
+
 Scott is a boy who automatically transforms into a squirrel on some
 nights for unexplained reasons. He visited doctor Van Helsing who
 suggested that he keep track of all the things he does on a regular
@@ -8,7 +11,7 @@ correlated with the transformation.
 
 The journal is saved as a file called [journal.json](journal.json)
 which has multiple entries like this one for each day of the month for
-3 months. A total of 92 entries.
+3 months. A total of 91 entries.
 
     {
       "events": [
@@ -21,7 +24,7 @@ which has multiple entries like this one for each day of the month for
 
 This indicates that, for this day, Scott ate carrots, he exercised,
 and it was the weekend. He did not turn into a squirrel on that
-day. There will be similar entries for each of the 92 days.
+day. There will be similar entries for each of the 91 days.
 
 This file was then submitted to the doctor who analysed it to find out
 which event is most correlated (positively or negatively) with the
@@ -135,7 +138,12 @@ what to do or not do.
    the journal and the values will be the correlations of the event
    and `squirrel`. 
 
-1. Write a function called `diagnose` which will take the
-   `journal.json` and use `compute_correlations` and return the event
-   that's most highly (positively or negatively) correlated with the
-   `squirrel` event. 
+1. Write a function called `diagnose` which will take the name of the
+   journal file (`journal.json`) and use `compute_correlations` and
+   return the event that's most highly positively and most highly
+   negatively correlated with the `squirrel` event.
+
+# Diagnosis
+
+What would you recommend to Scott to prevent transforming into a squirrel?
+    
