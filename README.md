@@ -128,9 +128,9 @@ Implement the following functions in the provided `correlation.py` file.
    dictionaries (which is what the actual journal file contains).
 
 1. Write a function called `compute_phi` which will take 2 inputs, the
-   output of the `load_journal` function mentioned above and an event
-   (e.g. `"carrot"`). It should return the correlation of the
-   `"carrot"` event and the `squirrel` event.
+   name of a file that you can pass to the `load_journal` function
+   mentioned above and an event (e.g. `"carrot"`). It should return
+   the correlation of the `"carrot"` event and the `squirrel` event.
    
 1. Write a function called `compute_correlations` which will take the
    filename of the journal (`journal.json`) as input. It will first
